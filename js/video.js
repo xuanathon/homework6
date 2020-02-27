@@ -6,22 +6,22 @@ function getVid(){
 
 function playVid() {
 	video.play();
-	// console.log("Play Video");
+	console.log("Play Video");
 }
 
 function pauseVid() {
 	video.pause();
-	// console.log("Pause Video");
+	console.log("Pause Video");
 }
 
 function decreaseSpeed() {
-
-  	console.log("Speed is " + '');
+	video.playbackRate = (video.playbackRate * 0.8)
+  	console.log("Speed is " + video.playbackRate);
 }
 
 function increaseSpeed() {
-
-	console.log("Speed is "+ '');
+	video.playbackRate = (video.playbackRate * 1.25)
+	console.log("Speed is " + video.playbackRate);
 }
 
 function skipAhead() {
