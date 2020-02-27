@@ -30,10 +30,19 @@ function skipAhead() {
 }
 
 function mute() {
+	var muteButton = document.getElementById('mute')
 
-	console.log("Unmuted");
+	if (video.muted === true) {
+		video.muted = false;
+		console.log("Unmuted");
 
-	console.log("Muted");
+		muteButton.innerHTML = 'Mute'
+	} else if (video.muted === false) {
+		video.muted = true;
+		console.log("Muted");
+
+		muteButton.innerHTML = 'Unmute'
+	}
 }
 
 function changeVolume() {
