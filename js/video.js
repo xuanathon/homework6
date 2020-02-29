@@ -26,8 +26,12 @@ function increaseSpeed() {
 }
 
 function skipAhead() {
-
-	console.log("Current location is "+ '');
+	if (video.currentTime <= video.duration - 60) {
+		video.currentTime += 60;
+	} else {
+		video.currentTime = 0;
+	}
+	console.log("Current location is "+ video.currentTime);
 }
 
 function mute() {
