@@ -6,6 +6,7 @@ function getVid(){
 
 function playVid() {
 	video.play();
+	document.getElementById('volume').innerHTML = (video.volume * 100) + '%';
 	console.log("Play Video");
 }
 
@@ -46,8 +47,12 @@ function mute() {
 }
 
 function changeVolume() {
+	var volumeSlider = document.getElementById('volumeSlider');
 
-	console.log("Volume is ");
+	video.volume = (volumeSlider.value / 100);
+	document.getElementById('volume').innerHTML = (video.volume * 100) + '%';
+
+	console.log("Volume is " + video.volume * 100 + '%');
 }
 
 
