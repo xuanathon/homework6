@@ -57,11 +57,11 @@ function changeVolume() {
 
 
 function gray() {
-
+	video.classList.add('grayscale');
 	console.log("In grayscale")
 }
 
 function color() {
-
+	video.classList.remove('grayscale');
 	console.log("In color")
 }
